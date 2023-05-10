@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  width: fit-content;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    background-color: #202125;
+    color: #01B075;
+    
+}
+
+
+
+img{
+    margin-top: 40px;
+}
+
+h1{
+    font-size: 30px;
+    
+}
+h2{
+    text-align: center;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input{
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #01B075;
+    caret-color: #01B075;
+    margin-top: 50px;
+    padding: 5px;
+    color: #01B075;
+    font-size: 18px;
+    width: 400px;
+    cursor: pointer;
+    border-radius: .35rem ;
+    
+}
+
+form input:focus{
+    background-color: transparent;
+}
+
+
+
+.notification{
+ margin-top: 10px;
+ display: none;
+}
+
+form button{
+    margin-top: 40px;
+    font-size: 19px;
+    padding: 5px 10px 5px 10px;
+    background-color: transparent;
+    border-radius: 0.35rem;
+    color: #01B075;
+    border: 2px solid #01B075;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+
+}
+
+form button:hover{
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.3s ease-in;
+}
+
+
+@media(max-width:321px){
+    form input{
+        width: 310px;
+    }
+}
