@@ -37,7 +37,6 @@ QRCodeForm.addEventListener('submit',(e)=>{
 
 
 userInput.addEventListener('change',(e)=>{
-  console.log(e.target.value)
   notification.style.display='none'  
   userInputData=e.target.value
 })
