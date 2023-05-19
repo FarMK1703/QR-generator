@@ -165,8 +165,8 @@ form button:hover{
 }
 
 
-@media(max-width:380px){
+@media(max-width:450px){
     form input{
-        width: 310px;
+        width: 300px;
     }
 }
